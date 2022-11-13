@@ -21,3 +21,5 @@ higher than or equal to $550. Order the result by product price in descending, t
 product name in ascending.
 
 QUERY: select PRO_NAME, PRO_PRICE from products where PRO_PRICE >= 550 ORDER BY PRO_PRICE DESC;
+       
+       select PRO_NAME, PRO_PRICE from products where PRO_PRICE >= 550 ORDER BY PRO_NAME ;

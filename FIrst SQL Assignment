@@ -12,6 +12,12 @@ QUERY: select name, city from sales where city='Paris';
 
 Problem Statement 3: write a SQL query to select a range of products whose
 price is in the range Rs.200 to Rs.600. Begin and end values are included. Return
-pro_id, pro_name, pro_price, and pro_com..
+pro_id, pro_name, pro_price, and pro_com.
 
 QUERY: select *  from products where PRO_PRICE BETWEEN 200 and 600;
+
+Problem Statement 4: write a SQL query to find the items whose prices are
+higher than or equal to $550. Order the result by product price in descending, then
+product name in ascending.
+
+QUERY: select PRO_NAME, PRO_PRICE from products where PRO_PRICE >= 550 ORDER BY PRO_PRICE DESC;

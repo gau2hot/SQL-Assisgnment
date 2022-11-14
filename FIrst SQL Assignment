@@ -23,3 +23,11 @@ product name in ascending.
 QUERY: select PRO_NAME, PRO_PRICE from products where PRO_PRICE >= 550 ORDER BY PRO_PRICE DESC;
        
        select PRO_NAME, PRO_PRICE from products where PRO_PRICE >= 550 ORDER BY PRO_NAME ;
+
+Problem Statement 5: write a SQL query to find details of all orders excluding
+those with ord_date equal to '2012-09-10' and salesman_id higher than 5005 or
+purch_amt greater than 1000.Return ord_no, purch_amt, ord_date, customer_id and
+salesman_id.
+
+
+QUERY: Select count(*) from SALES_NEW WHERE NOT(ord_date = '2012-09-10' AND (salesman_id > 5005 OR purch_amt > 1000));

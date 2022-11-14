@@ -30,4 +30,4 @@ purch_amt greater than 1000.Return ord_no, purch_amt, ord_date, customer_id and
 salesman_id.
 
 
-QUERY: Select count(*) from SALES_NEW WHERE NOT(ord_date = '2012-09-10' AND (salesman_id > 5005 OR purch_amt > 1000));
+QUERY: Select * from SALES_NEW WHERE NOT(ord_date = '2012-09-10' AND (salesman_id > 5005 OR purch_amt > 1000));

@@ -31,3 +31,37 @@ salesman_id.
 
 
 QUERY: Select * from SALES_NEW WHERE NOT(ord_date = '2012-09-10' AND (salesman_id > 5005 OR purch_amt > 1000));
+
+Problem Statement: 6.1: Write a query to fetch which country has the highest population?
+
+QUERY: Select  name,
+               MAX(population) as Country_with_highest_poplulaiton 
+       from WORLD;
+       
+Problem Statement: 6.2: Write a query to fetch the name of the country which has the least gdp?
+QUERY: Select  name,
+               MIN(gdp) as Country_with_least_gdp
+       from WORLD;
+       
+Problem Statement: 6.3: Write a query to fetch the name of the country which ends with letter C?
+QUERY: SELECT name as country_ending_with_C 
+       from WORLD 
+       where name like '%C';
+       
+Problem Statement: 6.4: Write a query to fetch the name of the country which starts with letter D?
+QUERY: SELECT name as country_starts_with_D
+       from WORLD 
+       where name like 'D%';
+       
+Problem Statement: 6.5: write query to fetch which continent has highest gdp?
+ QUERY: SELECT continent, max(gdp) as continent_with_highest_GDP from WORLD;
+
+Problem Statement: 6.6: Give the total GDP of Africa?
+QUERY: select continent, sum(gdp) as total_gdp_of_Africa from WORLD where continent= 'Africa' GROUP BY continent;
+
+Problem Statement: 6.7: write a query to fetch the total population for each continent?
+QUERY: select continent, sum(population) as total_population from WORLD GROUP BY continent;
+
+Problem Statement: 6.8: For each relevant continent show the number of countries that has a population of at least
+200000000?
+QUERY: select count(name) from WORLD where population>200000000;
